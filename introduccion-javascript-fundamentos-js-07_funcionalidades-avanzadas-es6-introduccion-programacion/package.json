@@ -1,0 +1,11 @@
+{
+  "name": "funcionalidades-avanzadas-js",
+  "version": "1.0.0",
+  "description": "Funcionalidades avanzadas de JavaScript con ES6 y principios de programación",
+  "keywords": [
+    "javascript",
+    "web development"
+  ],
+  "author": "Alex Muñoz <https://github.com/alexmf91>",
+  "license": "MIT"
+}
