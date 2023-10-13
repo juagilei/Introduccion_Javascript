@@ -1,0 +1,11 @@
+{
+  "name": "fundamentos-js-03",
+  "version": "1.0.0",
+  "description": "Ejercicios de Fundamentos de JavaScript - Métodos de Cadenas, Números y Arrays en JavaScript",
+  "keywords": [
+    "javascript",
+    "web development"
+  ],
+  "author": "Alex Muñoz <https://github.com/alexmf91>",
+  "license": "MIT"
+}
