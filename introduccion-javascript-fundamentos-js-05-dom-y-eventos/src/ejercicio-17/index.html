@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 17: Manejo de Evento de Carga de Imagen</title>
+  </head>
+  <!-- Maneja el evento de carga de una imagen 
+    y muestra un mensaje cuando la imagen se carga. -->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <img id= 'miImagen' src="imagen.jpg" alt="imagen">
+  
+    <script>
+      // Escribe tu codigo javascript aqui
+      const imagen=document.getElementById('miImagen')
+      // Miro la imagen con addEventListenr para ver si se ha cargado
+      imagen.addEventListener('load', () => {
+        alert('La imagen se ha cargado correctamente')
+      })
+      // Miro la imagen con addEventListenr para ver si se ha cargado
+      imagen.addEventListener('error', () => {
+        alert('La imagen no se ha cargado correctamente')
+      })
+    </script>
+  </body>
+</html>

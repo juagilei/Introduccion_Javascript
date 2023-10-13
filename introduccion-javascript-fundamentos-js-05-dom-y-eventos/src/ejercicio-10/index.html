@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 10: Agregar Elemento con `appendChild`</title>
+  </head>
+  <!-- Utiliza appendChild para agregar un nuevo elemento como hijo de otro elemento existente en el DOM. 
+    Aprenderás a crear y agregar elementos dinámicamente.-->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <div id="contenedor">Contenido existente</div>
+    <button id="miBoton">Agregar Elemento</button>
+    <input type="text" id="texto">
+
+
+    <script>
+      // Escribe tu codigo javascript aqui
+      // Creo una constante para que el valor que introduzca en input se quede guardado
+      const input = document.getElementById('texto')
+      // Creo una constante para un boton para que cuando le de un clik añada un alelento
+      const boton = document.getElementById('miBoton')
+      boton.addEventListener('click',()=>{
+      // Creo una constante para crear un nuevo evento en el padre contenedor, en este caso un div
+          const nuevoElemento = document.createElement('div')
+          // genero un texto para el nuevo elemento y lo introcuzco en el elemento
+          nuevoElemento.textContent = input.value
+          // creo una constante para tener el grupo conteneodr 
+          const contenedor = document.getElementById('contenedor')
+          // itroduzco el texto en el contenedor padr
+          contenedor.appendChild(nuevoElemento)
+        })
+      
+      
+  
+    </script>
+  </body>
+</html>

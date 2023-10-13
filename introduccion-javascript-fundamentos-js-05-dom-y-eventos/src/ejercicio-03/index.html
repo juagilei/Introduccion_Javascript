@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3: Selección de Elementos con `querySelector`</title>
+  </head>
+  <!-- Utiliza querySelector para seleccionar un elemento de un formulario
+       y cambia su valor utilizando JavaScript. 
+       Aprenderás cómo seleccionar un elemento específico de un formulario
+       y modificar su contenido.-->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <!-- introduzco un input en pantalla, 
+         o sea que la pantalla me pida un valor 
+         el inputo tiene unos elementos claros, 
+         type (para identificar el tipo de valor)
+         id (para identificar el input en si)
+         value (para porner el valor, texto o lo que sea)-->
+         <input type="text" id="'myInput", value="valor inicial">
+   
+    <script>
+      // Escribe tu codigo javascript aqui
+      // como siempre introduzco el elmento en una constante
+      // uso querySelector(este se usa para encontrar el primer elemento que lleva el identifidador)
+      // si querySelectorAll (este se usa para encontrar todos los elementos no solo el prmero)
+      
+      const inputElement=document.querySelector('input')
+      inputElement.addEventListener('click',(event)=>{
+      inputElement.value = 'nuevo valor'
+    })
+      
+    </script>
+  </body>
+</html>

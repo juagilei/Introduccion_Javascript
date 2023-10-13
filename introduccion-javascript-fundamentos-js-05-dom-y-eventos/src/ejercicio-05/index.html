@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5: Cambio de Contenido con `textContent`</title>
+  </head>
+  <!-- Cambia el texto contenido dentro de un elemento utilizando textContent 
+       en JavaScript. Este ejercicio te mostrará cómo modificar el texto visible
+       en un elemento HTML.
+    -->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+
+    <div id="miElemento">Texto inicial</div>
+    
+    <script>
+      // Escribe tu codigo javascript aqui
+      const elemento = document.getElementById('miElemento')
+       // cuando paso el cursor por encima del texto
+       elemento.addEventListener('mouseover',(event)=>{
+      // el texto cambia
+      elemento.textContent = 'Cursor por encima de la palabra'})
+       // cuando paso el cursor por encima del texto
+       elemento.addEventListener('mouseout',(event)=>{
+      // el texto cambia
+      elemento.textContent = 'Texto inical'})
+     
+     
+      
+    </script>
+  </body>
+</html>

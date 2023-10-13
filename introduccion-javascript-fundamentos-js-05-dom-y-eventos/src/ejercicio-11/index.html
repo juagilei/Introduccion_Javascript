@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 11: Eliminar Elemento con `removeChild`</title>
+  </head>
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <div id="contenedor">
+      <div id="elementoAEliminar">Elemento a eliminar</div>
+      <div id='otro'> Otro elemento</div>
+    </div>
+
+    <script>
+      // Escribe tu codigo javascript aqui
+      const elementoAEliminar = document.getElementById('elementoAEliminar')
+      // meto en una constante el grupo donde hay que eliminar el elemento
+      const padre = elementoAEliminar.parentElement
+      padre.removeChild(elementoAEliminar)
+
+    </script>
+  </body>
+</html>

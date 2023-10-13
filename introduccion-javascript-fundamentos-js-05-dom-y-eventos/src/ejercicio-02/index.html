@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2: Selección de Elementos por Clase</title>
+  </head>
+  <!-- Selecciona todos los elementos con una clase específica y 
+      cambia sus estilos usando JavaScript. 
+      Este ejercicio te muestra cómo utilizar 
+      getElementsByClassName 
+      para seleccionar varios elementos y aplicarles cambios en el estilo.-->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <!-- Escribo varios elemtos con un dintificador de clase igual para todos-->
+    <div class="claseEspecifica">Elemento 1</div>
+    <div class="claseEspecifica">Elemento 2</div>
+    <div class="claseEspecifica">Elemento 3</div>
+    <script>
+      // Escribe tu codigo javascript aqui
+      // introduczco en una constante el elemento que 
+      // selecciona la clase espacificClass
+      // getElementsByClassName('nombre de la clase')
+      // siempre hay que usar la palabra clave document para usar el elemento
+      const elementos = document.getElementsByClassName('claseEspecifica')
+      // recorro todas las etiqueteas con la clase indicada mediante un for
+      for (const elemento of elementos) {
+      // voy a cambiar el background de los elementos
+        elemento.addEventListener('click',(event)=> {
+        elemento.textContent='Selected element'
+        elemento.style.backgroundColor = 'blue'
+      })
+       }
+
+    </script>
+  </body>
+</html>

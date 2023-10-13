@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1: Selección de Elementos por ID</title>
+  </head>
+  <!-- Selecciona un elemento por su ID único y cambia su contenido utilizando JavaScript. 
+    En este ejercicio, aprenderás a utilizar getElementById para acceder a un elemento 
+    específico en el DOM y modificar su contenido. -->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <!-- Pongo el elemento dentro de una etiqueta div, 
+        puede ser cualquier tipo de etiqueta bien sea div, ul, li, etc..
+        la cuestion es que debo de identificar el elemedo, por lo que a la etiqueta
+        le asigno una id para poder identificarla y llamarla desde el script (javaScript) -->
+
+    <div id="myElement">
+      Hello how are you ?
+    </div>
+
+    <script>
+      // Escribe tu codigo javascript aqui
+      // Desde script busco el elemento por su identidad
+      // (getElementID('Nombre del elemento')) y lo introduzco en una constante
+      // siempre hay que usar la palabra clave document para usar el elemento
+      
+      const myElement = document.getElementById('myElement')
+
+      // Vamos rizar el rizo y aunque no lo pida el ejercicio vamos a añarir que
+      // Cuando el cursor haga un click en el texto, el texto cambie y su color de fondo cambie
+
+      myElement.addEventListener('click', (event)=> {
+
+        // Cambio el texto
+        myElement.textContent='I´m good, very good'
+        // Cambio el background
+        myElement.style.backgroundColor = 'yellow'
+        // Tambien voy a mostrar en la consola el resultado
+        console.log('Html mode',myElement)
+        // También le añado una alerta para que me avise el navegador por pantalla
+        alert('The text has been cliked')
+
+      })
+
+
+      
+    </script>
+  </body>
+</html>

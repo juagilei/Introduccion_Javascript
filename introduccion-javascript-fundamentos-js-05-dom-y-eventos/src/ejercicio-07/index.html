@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7: Cambio de Atributos con `setAttribute`</title>
+  </head>
+  <!-- Utiliza setAttribute para establecer o modificar el valor de un atributo 
+    en un elemento HTML. En este ejercicio, aprenderás a cambiar los atributos de 
+    un elemento.
+
+-->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <input type='text' id="miElemento" value="elemento de atributo" >
+
+    <div id="otroElemento">Elemento con atributo</div>
+
+    
+    <script>
+      // Escribe tu codigo javascript aqui
+      // el elemento setAttribute cambia los atributos por ejemplo aqui vemos
+      // como cambia un recuadro de input a un boton
+
+      const elemento = document.getElementById('miElemento')
+      elemento.addEventListener('click',()=> {
+      elemento.setAttribute('type','button')
+      })
+      // en esta caso es un texo y lo podemos cambar de color
+      const otro_elemento = document.getElementById(otro)
+      otro_elemento.addEventListener('click',()=> {
+      otro_elemento.setAttribute('data-nuevo','valor')
+      })
+
+    </script>
+  </body>
+</html>

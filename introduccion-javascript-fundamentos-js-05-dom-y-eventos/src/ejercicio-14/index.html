@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 14: Detener la Propagación de Evento</title>
+  </head>
+  <!-- Utiliza stopPropagation para evitar que un evento se propague a elementos padre. 
+      Aprenderás cómo evitar que los eventos se propaguen en el árbol DOM.-->
+
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+    <!-- Indroduzco un padre y un hjo-->
+    <div id="elementoPadre">
+      <div id="elementoHijo1">Haz clic aquí 1</div>
+      <div id="elementoHijo2">Haz clic aquí 2</div>
+      <div id="elementoHijo3">Haz clic aquí 3</div>
+    </div>
+
+    <script>
+      // Escribe tu codigo javascript aqui
+      // en este caso si clico haz clic aqui 1 evento se traslada al padre
+      // se ejecuta el evento hijo y como clicamos tembien en el padre pues 
+      // se ejecuta el padre tambien como ponemos en la siguiente sentencia
+
+      const elementoHijo1 = document.getElementById('elementoHijo1')
+      elementoHijo1.addEventListener('click',() => {
+        alert('Evento hijo1')
+      })
+      // en este caso si clico en padre afecta a todos pero en aqui 2 no 
+      // por que le hemos puesto un stopPropagation
+      const elementoPadre = document.getElementById('elementoPadre')
+      elementoPadre.addEventListener('click', () => {
+        alert('Evento padre')
+      })
+      // en este caso si clico haz clic aqui  evento no se traslada al padre
+      // gracias a stopPropagation conseguimos que el clic solo efecte a este elemento 
+      // y no al resto por lo que aunque clico en el elemento padre no se activa
+      // el clic que hago en padre
+      const elementoHijo2 = document.getElementById('elementoHijo2')
+      elementoHijo2.addEventListener('click',(eventoHijo2) => {
+        eventoHijo2.stopPropagation()
+        alert('Evento hijo sin propagacion')
+      })
+
+      
+    </script>
+    </script>
+  </body>
+</html>

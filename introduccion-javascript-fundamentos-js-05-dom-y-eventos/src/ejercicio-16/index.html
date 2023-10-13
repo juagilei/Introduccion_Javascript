@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 16: Temporizador de Evento Personalizado</title>
+  </head>
+  <!-- Crea un temporizador que dispare un evento personalizado después de cierto tiempo. -->
+  <body>
+    <!-- Escribe tu codigo html aqui -->
+
+    <button id="miBoton">Iniciar Temporizador</button>
+
+    <script>
+      // Escribe tu codigo javascript aqui
+      // Declaro una función para usar el temporizador
+      const boton = document.getElementById('miBoton')
+      function iniciarTemporizador() {
+        setTimeout(() => {
+          // creo un evento personalizado
+          const eventoPersonalizado = new Event('eventoPersonalizado')
+          // activo con dispachEvent el evento personalizado cuando activo el boton
+          boton.dispatchEvent(eventoPersonalizado)
+          // le he puesto un temporizador de 3 segundos para acivarse
+        }, 3000) // 3 segundos
+      }
+      // cuando se active la funcion eventoPersonalizado salta la alerta
+      boton.addEventListener('eventoPersonalizado', () => {
+        alert('¡Evento personalizado disparado!')
+      })
+      // al clicar el boton activamos el temporizador
+      boton.addEventListener('click', () => {
+        iniciarTemporizador()
+      })
+
+    </script>
+  </body>
+</html>
